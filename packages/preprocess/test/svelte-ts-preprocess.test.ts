@@ -27,10 +27,7 @@ let c: number = 5;
       filename,
       attributes
     })
-    if (result) {
-      expect(result).toHaveProperty('code')
-      expect(result.code).toBeTruthy()
-    }
+    expect(result).toHaveProperty('code')
   })
 
   it('should preserve all imports', () => {
@@ -41,14 +38,12 @@ import x from 'x-lib';
     const attributes = {
       lang: 'ts'
     }
-    const result = preprocess().script({
+    const result = preprocess({ hideErrors: true }).script({
       content,
       filename,
       attributes
     })
-    if (result) {
-      expect(result).toHaveProperty('code', content)
-    }
+    expect(result).toHaveProperty('code', content)
   })
 
   it('should hide errors', () => {
@@ -65,8 +60,22 @@ import x from 'x-lib';
       filename,
       attributes
     })
-    if (result) {
-      expect(result).toHaveProperty('code', content)
+    expect(result).toHaveProperty('code', content)
+  })
+
+  it('should support external .ts files', () => {
+    const content = ''
+    const filename = 'Component.svelte'
+    const attributes = {
+      lang: 'ts',
+      src: 'src/svelte-ts-preprocess.ts'
     }
+    const opts = { hideErrors: true }
+    const result = preprocess(opts).script({
+      content,
+      filename,
+      attributes
+    })
+    expect(result).toHaveProperty('code')
   })
 })
