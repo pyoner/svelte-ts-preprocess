@@ -19,7 +19,7 @@ lerna bootstrap
 or `lerna + yarn` see [use workspaces](https://github.com/lerna/lerna/tree/master/commands/bootstrap#--use-workspaces)
 ```bash
 cd svelte-typescript
-yarn i lerna -g
+yarn global add lerna
 lerna bootstrap --use-workspaces
 ```
 
