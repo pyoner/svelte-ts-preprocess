@@ -27,6 +27,19 @@ Download https://github.com/pyoner/svelte-typescript/archive/master.zip and extr
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
+### For VSCode users
+
+Regardless of your OS, if you're using VSCode as your IDE for your Svelte project, you also need to do an extra step in order to have full language support with [svelte-code extension](https://github.com/UnwrittenFun/svelte-vscode).
+
+Create a `svelte.config.js` file in the root of your project with the following content:
+
+```
+const { preprocess } = require("@pyoner/svelte-ts-preprocess")
+
+module.exports = {
+  preprocess: preprocess()
+}
+```
 
 ## Get started
 
