@@ -1,6 +1,7 @@
 import svelte from "rollup-plugin-svelte";
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
+import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import typescript from "rollup-plugin-typescript2";
 
@@ -47,12 +48,23 @@ export default {
     // some cases you'll need additional configuration —
     // consult the documentation for details:
     // https://github.com/rollup/rollup-plugin-commonjs
-    resolve(),
+    resolve({
+      browser: true,
+      dedupe: importee =>
+        importee === "svelte" || importee.startsWith("svelte/")
+    }),
     commonjs(),
     typescript(),
+
+    // Watch the `public` directory and refresh the
+    // browser on changes when not in production
+    !production && livereload("public"),
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
     production && terser()
-  ]
+  ],
+  watch: {
+    clearScreen: false
+  }
 };
