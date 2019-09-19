@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "svelte-ts-template",
+  "name": "template",
   "version": "1.0.0",
   "devDependencies": {
     "@pyoner/svelte-ts-preprocess": "^1.2.1",
