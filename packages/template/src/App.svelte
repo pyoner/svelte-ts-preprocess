@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
   import { writable } from "svelte/store";
+  import { myStore } from "./store";
 
   import Counter from "./Counter.svelte";
 
@@ -28,4 +29,5 @@
   <Counter />
   <Counter value={1}>Counter 1</Counter>
   <Counter bind:value={$count} step={3}>Counter 2</Counter>
+  <Counter bind:value={$myStore} step={5}>Counter 3</Counter>
 </p>
