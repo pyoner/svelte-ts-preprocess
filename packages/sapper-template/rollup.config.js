@@ -4,27 +4,13 @@ import commonjs from "rollup-plugin-commonjs";
 import svelte from "rollup-plugin-svelte";
 import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
+import typescript from "rollup-plugin-typescript2";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
-import typescript from "rollup-plugin-typescript2";
 
-import {
-    preprocess,
-    createEnv,
-    readConfigFile
-} from "@pyoner/svelte-ts-preprocess";
+const svelteOptions = require("./svelte.config");
 
 const production = !process.env.ROLLUP_WATCH;
-
-const env = createEnv();
-const compilerOptions = readConfigFile(env);
-const opts = {
-    env,
-    compilerOptions: {
-        ...compilerOptions,
-        allowNonTsExtensions: true
-    }
-};
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -45,10 +31,10 @@ export default {
                 "process.env.NODE_ENV": JSON.stringify(mode)
             }),
             svelte({
+                ...svelteOptions,
                 dev,
                 hydratable: true,
                 emitCss: true,
-                preprocess: preprocess(opts)
             }),
             resolve({
                 browser: true
@@ -98,9 +84,9 @@ export default {
                 "process.env.NODE_ENV": JSON.stringify(mode)
             }),
             svelte({
+                ...svelteOptions,
                 generate: "ssr",
                 dev,
-                preprocess: preprocess(opts)
             }),
             resolve(),
             commonjs(),

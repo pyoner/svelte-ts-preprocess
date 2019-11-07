@@ -5,23 +5,9 @@ import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import typescript from "rollup-plugin-typescript2";
 
-import {
-  preprocess,
-  createEnv,
-  readConfigFile
-} from "@pyoner/svelte-ts-preprocess";
+const svelteOptions = require("./svelte.config");
 
 const production = !process.env.ROLLUP_WATCH;
-
-const env = createEnv();
-const compilerOptions = readConfigFile(env);
-const opts = {
-  env,
-  compilerOptions: {
-    ...compilerOptions,
-    allowNonTsExtensions: true
-  }
-};
 
 export default {
   input: "src/main.ts",
@@ -33,6 +19,7 @@ export default {
   },
   plugins: [
     svelte({
+      ...svelteOptions,
       // enable run-time checks when not in production
       dev: !production,
       // we'll extract any component CSS out into
@@ -40,7 +27,6 @@ export default {
       css: css => {
         css.write("public/bundle.css");
       },
-      preprocess: preprocess(opts)
     }),
 
     // If you have external dependencies installed from
