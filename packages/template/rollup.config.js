@@ -1,15 +1,15 @@
-import svelte from "rollup-plugin-svelte";
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
-import livereload from "rollup-plugin-livereload";
-import { terser } from "rollup-plugin-terser";
-import typescript from "rollup-plugin-typescript2";
+const svelte = require("rollup-plugin-svelte");
+const commonjs = require("rollup-plugin-commonjs");
+const resolve = require("rollup-plugin-node-resolve");
+const livereload = require("rollup-plugin-livereload");
+const { terser } = require("rollup-plugin-terser");
+const typescript = require("rollup-plugin-typescript2");
 
 const svelteOptions = require("./svelte.config");
 
 const production = !process.env.ROLLUP_WATCH;
 
-export default {
+module.exports = {
   input: "src/main.ts",
   output: {
     sourcemap: true,
