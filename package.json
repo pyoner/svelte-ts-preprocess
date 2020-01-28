@@ -3,8 +3,5 @@
   "workspaces": [
     "packages/*"
   ],
-  "name": "monorepo-svelte-ts-preprocess",
-  "devDependencies": {
-    "lerna": "^3.13.3"
-  }
+  "name": "monorepo-svelte-ts-preprocess"
 }
