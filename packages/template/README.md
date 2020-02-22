@@ -12,7 +12,7 @@ This is a project template for [Svelte](https://svelte.dev) apps. It lives at ht
 ```bash
 mkdir svelte-app
 curl -L https://github.com/pyoner/svelte-typescript/tarball/master > svelte-typescript.tar
-tar --strip-components=3 --wildcards --one-top-level=svelte-app -xf svelte-typescript.tar */packages/template
+tar --strip-components=3 --wildcards --one-top-level=svelte-app -xf svelte-typescript.tar '*/packages/template'
 ```
 
 ### For Mac users
