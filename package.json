@@ -1,0 +1,24 @@
+{
+  "name": "svelte-typescript-monorepo",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "A monorepo for Svelte Typescript",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyoner/svelte-typescript.git"
+  },
+  "keywords": [
+    "svelte",
+    "typescript",
+    "preprocess"
+  ],
+  "author": "Jungle <devex.soft@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pyoner/svelte-typescript/issues"
+  },
+  "homepage": "https://github.com/pyoner/svelte-typescript#readme"
+}
