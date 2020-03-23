@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/pyoner/svelte-typescript/issues"
   },
-  "homepage": "https://github.com/pyoner/svelte-typescript#readme"
+  "homepage": "https://github.com/pyoner/svelte-typescript#readme",
+  "devDependencies": {
+    "husky": "^4.2.3"
+  }
 }
