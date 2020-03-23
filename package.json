@@ -22,6 +22,12 @@
   },
   "homepage": "https://github.com/pyoner/svelte-typescript#readme",
   "devDependencies": {
-    "husky": "^4.2.3"
+    "husky": "^4.2.3",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
