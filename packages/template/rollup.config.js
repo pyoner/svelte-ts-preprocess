@@ -1,6 +1,7 @@
 import svelte from "rollup-plugin-svelte";
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import json from "@rollup/plugin-json";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import typescript from "@wessberg/rollup-plugin-ts";
@@ -18,6 +19,7 @@ export default {
     file: "public/bundle.js"
   },
   plugins: [
+    json(),
     svelte({
       ...svelteOptions,
       // enable run-time checks when not in production
