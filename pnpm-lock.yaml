@@ -9,12 +9,12 @@ importers:
   packages/app:
     devDependencies:
       "@pyoner/svelte-ts-preprocess": "link:../preprocess"
-      "@rollup/plugin-commonjs": 11.0.2_rollup@1.32.1
       "@rollup/plugin-json": 4.0.2_rollup@1.32.1
       "@rollup/plugin-node-resolve": 7.1.1_rollup@1.32.1
       "@wessberg/rollup-plugin-ts": 1.2.21_rollup@1.32.1+typescript@3.8.3
       npm-run-all: 4.1.5
       rollup: 1.32.1
+      rollup-plugin-commonjs: 9.3.4_rollup@1.32.1
       rollup-plugin-svelte: 5.1.1_rollup@1.32.1+svelte@3.0.0
       rollup-plugin-terser: 4.0.4_rollup@1.32.1
       sirv-cli: 0.3.2
@@ -22,12 +22,12 @@ importers:
       typescript: 3.8.3
     specifiers:
       "@pyoner/svelte-ts-preprocess": "*"
-      "@rollup/plugin-commonjs": ^11.0.2
       "@rollup/plugin-json": ^4.0.2
       "@rollup/plugin-node-resolve": ^7.1.1
       "@wessberg/rollup-plugin-ts": ^1.2.21
       npm-run-all: ^4.1.5
       rollup: ^1.2.2
+      rollup-plugin-commonjs: 9.3.4
       rollup-plugin-svelte: ^5.0.3
       rollup-plugin-terser: ^4.0.4
       sirv-cli: ^0.3.1
@@ -98,7 +98,6 @@ importers:
       "@babel/preset-env": 7.8.7_@babel+core@7.8.7
       "@babel/runtime": 7.8.7
       "@pyoner/svelte-ts-preprocess": "link:../preprocess"
-      "@rollup/plugin-commonjs": 11.0.2_rollup@1.32.1
       "@rollup/plugin-json": 4.0.2_rollup@1.32.1
       "@rollup/plugin-node-resolve": 7.1.1_rollup@1.32.1
       "@types/node": 12.12.30
@@ -106,6 +105,7 @@ importers:
       npm-run-all: 4.1.5
       rollup: 1.32.1
       rollup-plugin-babel: 4.4.0_@babel+core@7.8.7+rollup@1.32.1
+      rollup-plugin-commonjs: 9.3.4_rollup@1.32.1
       rollup-plugin-replace: 2.2.0
       rollup-plugin-svelte: 5.1.1_rollup@1.32.1+svelte@3.20.1
       rollup-plugin-terser: 4.0.4_rollup@1.32.1
@@ -119,7 +119,6 @@ importers:
       "@babel/preset-env": ^7.0.0
       "@babel/runtime": ^7.0.0
       "@pyoner/svelte-ts-preprocess": ^1.2.1
-      "@rollup/plugin-commonjs": ^11.0.2
       "@rollup/plugin-json": ^4.0.2
       "@rollup/plugin-node-resolve": ^7.1.1
       "@types/node": ^12.0.8
@@ -129,6 +128,7 @@ importers:
       polka: ^0.5.0
       rollup: ^1.0.0
       rollup-plugin-babel: ^4.0.2
+      rollup-plugin-commonjs: 9.3.4
       rollup-plugin-replace: ^2.0.0
       rollup-plugin-svelte: ^5.0.1
       rollup-plugin-terser: ^4.0.4
@@ -141,12 +141,12 @@ importers:
       sirv-cli: 0.4.5
     devDependencies:
       "@pyoner/svelte-ts-preprocess": "link:../preprocess"
-      "@rollup/plugin-commonjs": 11.0.2_rollup@1.32.1
       "@rollup/plugin-json": 4.0.2_rollup@1.32.1
       "@rollup/plugin-node-resolve": 7.1.1_rollup@1.32.1
       "@wessberg/rollup-plugin-ts": 1.2.21_rollup@1.32.1+typescript@3.8.3
       npm-run-all: 4.1.5
       rollup: 1.32.1
+      rollup-plugin-commonjs: 9.3.4_rollup@1.32.1
       rollup-plugin-livereload: 1.1.0_rollup@1.32.1
       rollup-plugin-svelte: 5.1.1_rollup@1.32.1+svelte@3.20.1
       rollup-plugin-terser: 4.0.4_rollup@1.32.1
@@ -154,12 +154,12 @@ importers:
       typescript: 3.8.3
     specifiers:
       "@pyoner/svelte-ts-preprocess": ^1.2.1
-      "@rollup/plugin-commonjs": ^11.0.2
       "@rollup/plugin-json": ^4.0.2
       "@rollup/plugin-node-resolve": ^7.1.1
       "@wessberg/rollup-plugin-ts": ^1.2.13
       npm-run-all: ^4.1.5
       rollup: ^1.12.0
+      rollup-plugin-commonjs: 9.3.4
       rollup-plugin-livereload: ^1.0.0
       rollup-plugin-svelte: ^5.0.3
       rollup-plugin-terser: ^4.0.4
@@ -2126,21 +2126,6 @@ packages:
   /@polka/url/0.5.0:
     resolution:
       integrity: sha512-oZLYFEAzUKyi3SKnXvj32ZCEGH6RDnao7COuCVhDydMS9NrCSVXhM79VaKyP5+Zc33m0QXEd2DN3UkU7OsHcfw==
-  /@rollup/plugin-commonjs/11.0.2_rollup@1.32.1:
-    dependencies:
-      "@rollup/pluginutils": 3.0.8_rollup@1.32.1
-      estree-walker: 1.0.1
-      is-reference: 1.1.4
-      magic-string: 0.25.7
-      resolve: 1.15.1
-      rollup: 1.32.1
-    dev: true
-    engines:
-      node: ">= 8.0.0"
-    peerDependencies:
-      rollup: ^1.20.0
-    resolution:
-      integrity: sha512-MPYGZr0qdbV5zZj8/2AuomVpnRVXRU5XKXb3HVniwRoRCreGlf5kOE081isNWeiLIi6IYkwTX9zE0/c7V8g81g==
   /@rollup/plugin-json/4.0.2_rollup@1.32.1:
     dependencies:
       "@rollup/pluginutils": 3.0.8_rollup@1.32.1
@@ -2319,10 +2304,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
-  /@types/estree/0.0.39:
-    dev: true
-    resolution:
-      integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
   /@types/estree/0.0.43:
     dev: true
     resolution:
@@ -5370,12 +5351,6 @@ packages:
       node: ">=0.10.0"
     resolution:
       integrity: sha1-HQPd7VO9jbDzDCbk+V02/HyH3CQ=
-  /is-reference/1.1.4:
-    dependencies:
-      "@types/estree": 0.0.39
-    dev: true
-    resolution:
-      integrity: sha512-uJA/CDPO3Tao3GTrxYn6AwkM4nUPJiGGYu5+cB8qbC7WGFlrKZbiRo7SFKxUAEpFUfiHofWCXBUNhvYJMh+6zw==
   /is-regex/1.0.5:
     dependencies:
       has: 1.0.3
@@ -8166,6 +8141,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-84oo6ZTtoTUpjgNEr5SJyzQhzL72gaRodsSfyxC/AXRvwu0Yse9H8eF9IpGo7b8YetZhlI6v7ZQ6bKBFV/6S7w==
+  /resolve/1.17.0:
+    dependencies:
+      path-parse: 1.0.6
+    dev: true
+    resolution:
+      integrity: sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
   /responselike/1.0.2:
     dependencies:
       lowercase-keys: 1.0.1
@@ -8231,6 +8212,19 @@ packages:
       rollup: ">=0.60.0 <3"
     resolution:
       integrity: sha512-Lek/TYp1+7g7I+uMfJnnSJ7YWoD58ajo6Oarhlex7lvUce+RCKRuGRSgztDO3/MF/PuGKmUL5iTHKf208UNszw==
+  /rollup-plugin-commonjs/9.3.4_rollup@1.32.1:
+    dependencies:
+      estree-walker: 0.6.1
+      magic-string: 0.25.7
+      resolve: 1.17.0
+      rollup: 1.32.1
+      rollup-pluginutils: 2.8.2
+    deprecated: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-commonjs.
+    dev: true
+    peerDependencies:
+      rollup: ">=0.56.0"
+    resolution:
+      integrity: sha512-DTZOvRoiVIHHLFBCL4pFxOaJt8pagxsVldEXBOn6wl3/V21wVaj17HFfyzTsQUuou3sZL3lEJZVWKPFblJfI6w==
   /rollup-plugin-livereload/1.1.0_rollup@1.32.1:
     dependencies:
       livereload: 0.8.2
