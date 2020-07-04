@@ -1,11 +1,14 @@
 importers:
   .:
+    dependencies:
+      typescript: 3.9.6
     devDependencies:
       husky: 4.2.3
       pretty-quick: 2.0.1
     specifiers:
       husky: ^4.2.3
       pretty-quick: ^2.0.1
+      typescript: ^3.9.6
   packages/app:
     devDependencies:
       "@pyoner/svelte-ts-preprocess": "link:../preprocess"
@@ -9449,6 +9452,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
+  /typescript/3.9.6:
+    dev: false
+    engines:
+      node: ">=4.2.0"
+    hasBin: true
+    resolution:
+      integrity: sha512-Pspx3oKAPJtjNwE92YS05HQoY7z2SFyOpHo9MqJor3BXAGNaPUs83CuVp9VISFkSjyRfiTpmKuAYGJB7S7hOxw==
   /ua-parser-js/0.7.21:
     dev: true
     resolution:

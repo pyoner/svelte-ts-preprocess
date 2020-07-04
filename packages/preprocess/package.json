@@ -29,7 +29,7 @@
   "scripts": {
     "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc && typedoc --out docs --target es6 --theme minimal --mode file src",
+    "build": "tsc -p ./tsconfig.json",
     "start": "tsc -w",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",

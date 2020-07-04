@@ -29,5 +29,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "dependencies": {
+    "typescript": "^3.9.6"
   }
 }
