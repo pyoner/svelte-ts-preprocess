@@ -1,6 +1,7 @@
 <script lang="ts">
-  export let value: number = 0;
-  export let step: number = 1;
+  import type { Num } from './types'
+  export let value: Num = 0;
+  export let step: Num = 1;
 </script>
 
 <div>

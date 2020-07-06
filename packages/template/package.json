@@ -3,7 +3,7 @@
   "name": "template",
   "version": "1.0.0",
   "devDependencies": {
-    "@pyoner/svelte-ts-preprocess": "^1.2.1",
+    "@pyoner/svelte-ts-preprocess": "^1.3.0",
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@wessberg/rollup-plugin-ts": "^1.2.13",
