@@ -1,12 +1,14 @@
 import { preprocess } from '../src/svelte-ts-preprocess'
 
 describe('preprocess test', () => {
+  const opts = { hideErrors: true }
+
   it('should be function', () => {
     expect(preprocess).toBeInstanceOf(Function)
   })
 
   it('returns object with "script" property', () => {
-    expect(preprocess()).toHaveProperty('script')
+    expect(preprocess(opts)).toHaveProperty('script')
   })
 
   it('run preprocess', () => {
@@ -22,7 +24,7 @@ let c: number = 5;
     const attributes = {
       lang: 'ts'
     }
-    const result = preprocess().script({
+    const result = preprocess(opts).script({
       content,
       filename,
       attributes
@@ -38,12 +40,32 @@ import x from 'x-lib';
     const attributes = {
       lang: 'ts'
     }
-    const result = preprocess({ hideErrors: true }).script({
+    const result = preprocess(opts).script({
       content,
       filename,
       attributes
     })
     expect(result).toHaveProperty('code', content)
+  })
+
+  it('should remove types imports', () => {
+    const content = `import Form from './Form.svelte';
+import type x from 'x-lib';
+let a: x = 5;
+`
+    const expected = `import Form from './Form.svelte';
+let a = 5;
+`
+    const filename = 'Component.svelte'
+    const attributes = {
+      lang: 'ts'
+    }
+    const result = preprocess(opts).script({
+      content,
+      filename,
+      attributes
+    })
+    expect(result).toHaveProperty('code', expected)
   })
 
   it('should hide errors', () => {
@@ -70,7 +92,6 @@ import x from 'x-lib';
       lang: 'ts',
       src: 'src/svelte-ts-preprocess.ts'
     }
-    const opts = { hideErrors: true }
     const result = preprocess(opts).script({
       content,
       filename,

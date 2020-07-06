@@ -8,6 +8,10 @@ function importTransformer<T extends ts.Node>(): ts.TransformerFactory<T> {
   return context => {
     const visit: ts.Visitor = node => {
       if (ts.isImportDeclaration(node)) {
+        if (node.importClause?.isTypeOnly) {
+          return node
+        }
+
         return ts.createImportDeclaration(
           node.decorators,
           node.modifiers,
@@ -95,7 +99,7 @@ interface Script {
   filename: string
   content: string
   attributes: {
-    lang?: string,
+    lang?: string
     src?: string
   }
 }
