@@ -12,7 +12,7 @@
 </div>
 
 <script lang="ts">
-  import { Person } from "./types";
+  import type { Person } from "./types";
   import { add } from "./funcs";
 
   const p: Person = {
