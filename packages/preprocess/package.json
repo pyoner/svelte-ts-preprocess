@@ -1,6 +1,6 @@
 {
   "name": "@pyoner/svelte-ts-preprocess",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Typescript preprocessor for Svelte 3",
   "keywords": [
     "svelte",
@@ -118,6 +118,6 @@
     "typedoc": "^0.14.2"
   },
   "peerDependencies": {
-    "typescript": "^3.4.4"
+    "typescript": "^3.8"
   }
 }
