@@ -1,0 +1,31 @@
+{
+  "name": "@pyoner/svelte-nossr-preprocess",
+  "version": "1.0.0",
+  "description": "No SSR preprocessor for Svelte",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -t esnext -m commonjs -d --outDir ./dist ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyoner/svelte-typescript.git"
+  },
+  "keywords": [
+    "svelte",
+    "sapper",
+    "nossr",
+    "ssr",
+    "preprocess"
+  ],
+  "author": "Jungle <devex.soft@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pyoner/svelte-typescript/issues"
+  },
+  "homepage": "https://github.com/pyoner/svelte-typescript/packages/nossr/#readme",
+  "peerDependencies": {
+    "typescript": "^3.8"
+  }
+}

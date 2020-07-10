@@ -8,8 +8,10 @@ import { terser } from "rollup-plugin-terser";
 import typescript from "@wessberg/rollup-plugin-ts";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
+import { nossr } from "@pyoner/svelte-nossr-preprocess";
 
 const svelteOptions = require("./svelte.config");
+const sveltePreprocessors = [nossr(), svelteOptions.preprocess];
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -86,7 +88,7 @@ export default {
         "process.env.NODE_ENV": JSON.stringify(mode)
       }),
       svelte({
-        ...svelteOptions,
+        preprocess: sveltePreprocessors,
         generate: "ssr",
         dev
       }),

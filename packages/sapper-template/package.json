@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
     "@pyoner/svelte-ts-preprocess": "^1.3.0",
+    "@pyoner/svelte-nossr-preprocess": "workspace:^1.0.0",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
