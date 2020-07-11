@@ -6,18 +6,29 @@ interface Script {
   };
 }
 
-function script({ content, attributes }: Script) {
+interface Markup {
+  content: string;
+  filename: string;
+}
+
+function script({ attributes }: Script) {
   const { nossr } = attributes;
   if (nossr !== undefined) {
     return {
-      code:
-        'import Nossr from "@pyoner/svelte-nossr-preprocess/src/nossr.svelte";'
+      code: ""
     };
   }
 }
 
+const p = /\<nossr\>(.|\n)*?\<\/nossr\>/gim;
+function markup({ content }: Markup) {
+  const code = content.replace(p, "");
+  return { code };
+}
+
 export function nossr() {
   return {
-    script
+    script,
+    markup
   };
 }
