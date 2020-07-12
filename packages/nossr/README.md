@@ -24,4 +24,4 @@ npm i -D @pyoner/svelte-nossr-preprocess
 
 ## How to use the preprocessor?
 
-See the [rollup config](../sapper-template/rollup.config.js) for Sapper
+See the [rollup config](https://github.com/pyoner/svelte-typescript/blob/master/packages/sapper-template/rollup.config.js) for Sapper

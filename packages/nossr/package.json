@@ -1,6 +1,6 @@
 {
   "name": "@pyoner/svelte-nossr-preprocess",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "No SSR preprocessor for Svelte",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/pyoner/svelte-typescript/issues"
   },
-  "homepage": "https://github.com/pyoner/svelte-typescript/packages/nossr/#readme",
+  "homepage": "https://github.com/pyoner/svelte-typescript/tree/master/packages/nossr#readme",
   "peerDependencies": {
     "typescript": "^3.8"
   }
