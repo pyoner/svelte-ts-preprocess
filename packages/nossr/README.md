@@ -16,7 +16,7 @@ This `preprocessor` remove a code from the `script` tag, see example:
 </nossr>
 ```
 
-## Instalation
+## Installation
 
 ```bash
 npm i -D @pyoner/svelte-nossr-preprocess
